@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/astro-ascendant/ascendant-ts/main/assets/wordmark.webp" alt="Ascendant" width="360" />
+  <img src="https://raw.githubusercontent.com/astro-ascendant/website/main/assets/brand/wordmark.svg" alt="Ascendant" width="360" />
 </p>
 
 <h3 align="center">Modern developer ecosystem for sidereal astrology</h3>
