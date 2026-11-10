@@ -24,7 +24,7 @@ Nothing is inferred per request and nothing is invented by a language model.
 | --- | --- | --- |
 | [`ascendant-ts`](https://github.com/astro-ascendant/ascendant-ts) | Effect-first TypeScript library. Calculates placements once, then derives charts, Vimshottari, Chara and Sthira dasha, Ashtakavarga, Jaimini, and transits from that shared calculation. | `bun add astro-ascendant effect` |
 | [`ascendant`](https://github.com/astro-ascendant/ascendant) | Python library returning plain dictionaries and lists: charts, dashas, yogas, Ashtakavarga, and a seven-karaka Jaimini core. | `pip install astro-ascendant` |
-| [`skills`](https://github.com/astro-ascendant/skills) | Agent skills and plugins that save a birth record once, then answer questions from the stored chart with citations. Works with OpenCode, Claude Code, Codex, Cursor, Copilot, and ChatGPT. | `opencode plugin add opencode-ascendant` |
+| [`skills`](https://github.com/astro-ascendant/skills) | Agent skills and plugins that save a birth record once, then answer questions from the stored chart with citations. Works with OpenCode, Claude Code, Codex, Cursor, Copilot, and ChatGPT. | `npx ascendant-skills install` |
 | [`website`](https://github.com/astro-ascendant/website) | Documentation site and the birth chart generator. | [astro-ascendant.vercel.app](https://astro-ascendant.vercel.app/docs) |
 
 ## Quick start
