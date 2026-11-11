@@ -27,61 +27,11 @@ Nothing is inferred per request and nothing is invented by a language model.
 | [`skills`](https://github.com/astro-ascendant/skills) | Agent skills and plugins that save a birth record once, then answer questions from the stored chart with citations. Works with OpenCode, Claude Code, Codex, Cursor, Copilot, and ChatGPT. | `npx ascendant-skills install` |
 | [`website`](https://github.com/astro-ascendant/website) | Documentation site and the birth chart generator. | [astro-ascendant.vercel.app](https://astro-ascendant.vercel.app/docs) |
 
-## Quick start
-
-**TypeScript**
-
-```typescript
-import { AstroParams, Chart } from "astro-ascendant";
-import * as Swisseph from "astro-ascendant/swisseph";
-import { DateTime, Effect, Layer } from "effect";
-
-const input = Chart.ChartParams.make({
-  moment: Chart.Moment.make({ date: DateTime.makeUnsafe("2000-01-01T12:00:00.000Z") }),
-  latitude: 12.9716,
-  longitude: 77.5946,
-});
-
-const layers = Layer.merge(AstroParams.DefaultAstroParams, Swisseph.SwissephLayer);
-const result = await Effect.runPromise(Chart.generate(input, [9]).pipe(Effect.provide(layers)));
-```
-
-**Python**
-
-```python
-from ascendant import Ascendant
-
-astro = Ascendant(
-    year=1990, month=1, day=1, hour=12, minute=0, second=0,
-    utc="+5:30", latitude=28.6139, longitude=77.2090,
-)
-
-chart = astro.get_chart(division=1)
-dasha = astro.get_current_dasha()
-```
-
-**Agents**
-
-Describe the birth details and ask a question. The skill stores the record, then
-answers from it. KP is the default; ask for Parashari to switch, and the two are
-never mixed.
-
-```console
-npx skills add thaletto/ascendant-agents --skill ascendant
-```
-
-## What we build on
-
-- **Named, repeatable methods.** 39 ayanamsas and 13 house systems in TypeScript;
-  seven ayanamsas and five house systems in Python. You pick the method, so you
-  can check the result.
-- **Structured output.** Charts, dashas, and Ashtakavarga come back as typed
-  values or plain dictionaries, not prose, so they compose with the rest of your
-  program.
-- **One calculation, many views.** Divisional charts, dashas, Jaimini, and
-  transits all derive from the same placements rather than recomputing the sky
-  from scratch.
-- **Open source.** The libraries are AGPL-3.0-or-later. The `flatlib` fork is MIT.
+## Features
+- Named methods you can repeat. TypeScript supports 39 ayanamsas and 13 house systems. Python supports 7 ayanamsas and 5 house systems. Select a method to check its results.
+- Structured results. Charts, dashas, and Ashtakavarga return typed values or plain dictionaries. Your program can use these results directly.
+- One calculation for many uses. Divisional charts, dashas, Jaimini, and transits use the same calculated positions. They do not calculate the sky positions again.
+- Open source. The libraries use the AGPL-3.0-or-later license. The flatlib fork uses the MIT license.
 
 ## Documentation
 
